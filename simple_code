@@ -1,0 +1,4 @@
+%python
+##Upload JSON file to databricks file_path = "/FileStore/tables/filename.json"
+tweet_json=sqlContext.read.json("/FileStore/tables/filename.json")
+tweet_pd=tweet_json.select("*").toPandas()
